@@ -1,0 +1,37 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    # Specify the self-hosted runner using its label. 
+    # By default, it's just 'self-hosted', but you can add custom labels.
+    runs-on: [self-hosted]
+
+    steps:
+    - name: Checkout repository
+      # Checks out your repository under $GITHUB_WORKSPACE, so the job can access it
+      uses: actions/checkout@v4
+
+    - name: Set up environment (example for Node.js website)
+      # Assuming Node.js is pre-installed on the self-hosted runner machine
+      run: npm install
+
+    - name: Build website (example for a static site generator)
+      run: npm run build
+
+    - name: Deploy to web server via SSH
+      # This step requires the self-hosted runner machine to have network access 
+      # to the web server and the necessary SSH keys/credentials configured on it.
+      run: |
+        echo "Starting deployment..."
+        # Example commands to copy build files to the web server
+        # Replace with your actual deployment commands (e.g., rsync, scp)
+        rsync -avz --delete ./build/ root@ip-10-0-1-133:/var/www/example.com/
+        echo "Deployment complete."
+
