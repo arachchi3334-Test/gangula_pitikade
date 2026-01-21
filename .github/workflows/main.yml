@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     # Specify the self-hosted runner using its label. 
-    # By default, it's just 'self-hosted', but you can add custom labels.
+    # By default, it's just 'self-hosted', but you can add custom labels. 
     runs-on: [self-hosted]
 
     steps:
