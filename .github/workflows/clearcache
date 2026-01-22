@@ -1,4 +1,4 @@
 - name: Remove temporary files and logs
   run: |
     sudo rm -rf /home/github-runner/actions-runner/cached/_diag/*
-    sudo rm -rf /home/github-runner/actions-runner/_work/_temp/*
+    sudo rm -rf /home/github-runner/actions-runner/_work/_temp/* 
