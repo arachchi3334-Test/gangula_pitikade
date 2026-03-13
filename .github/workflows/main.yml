@@ -16,7 +16,7 @@ jobs:
     - name: Copy files to web server via rsync
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Uses the secret we created
-        SERVER_IP: 54.145.127.9 # Replace with your server's IP
+        SERVER_IP:  44.210.143.125    #ith your server's IP
         SERVER_USER: ubuntu # Replace with your SSH username
         TARGET_DIR: /var/www/example.com/ # Replace with your website's directory
       run: |
