@@ -17,7 +17,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Uses the secret we created
         SERVER_IP:  44.210.143.125    #ith your server's IP
-        SERVER_USER: ubuntu # Replace with your SSH username
+        SERVER_USER: ubuntu # Replace with your SSH username 
         TARGET_DIR: /var/www/example.com/ # Replace with your website's directory
       run: |
          mkdir -p ~/.ssh
