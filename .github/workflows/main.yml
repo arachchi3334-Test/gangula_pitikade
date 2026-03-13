@@ -3,7 +3,7 @@ name: Deploy HTML website
 on:
   push:
     branches:
-      - main # Triggers the workflow on push events to the main branch
+      - main # Triggers the workflow on push events to the main branch 
 
 jobs:
   deploy:
